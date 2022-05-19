@@ -1,8 +1,21 @@
-.App {
-  text-align: center;
-
+body{
+  background-color: rgba(241, 241, 241, 0.507);  
 }
 
+.App {
+  text-align: center; 
+  width: auto;
+  height: auto;
+  margin: 50px;
+  background-color: rgba(190, 190, 190, 0.507);
+  border-radius: 15px;
+}
+
+h1 {
+  color:rgb(39, 211, 214);
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
 
 .form {
   display: flex;
@@ -11,8 +24,7 @@
   justify-content: center;
 }
 
-.form input {
-  
+.form input { 
   width: 300px;
   height: 30px;
   margin: 10px;
@@ -29,7 +41,8 @@
 
 .butaoCadastrar{
   padding: 10px;
-  margin: 15px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   border-radius: 7px;
   background-color: rgb(105, 29, 188);
   font-size: 15px;
@@ -40,28 +53,14 @@
   cursor: pointer;
 }
 
-
-
-body{
-  background-color: rgba(180, 180, 180, 0.726);
-  
-}
-
-
 table {
   width: 100%;
   border-style: none;
   border-collapse: collapse;
 }
 
-table td {
-  padding-top: 10px;
-  padding-bottom: 10px;
+thead{
   border-style: none;
-  border-top: 7px solid rgba(180, 180, 180, 0.726);
-  text-align: left;
-  padding-left: 50px;
-  
 }
 
 table  tr{
@@ -70,16 +69,30 @@ table  tr{
 }
 
 table  tr th{
+  font-size: 20px;
   color: darkgray;
   padding-bottom: 20px;
   padding-top: 20px;
-  text-align: left;
-  padding-left: 50px;
-  
+  text-align: center;
+  padding-left: 50px; 
 }
 
-thead{
+table td {
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-style: none;
+  border-top: 7px solid rgba(190, 190, 190, 0.507);
+  text-align: center;
+  padding-left: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(105, 29, 188);
+}
+
+tr img{
+  padding-right: 12px;
+  width: 18px;
+  height: 18px;
 }
 
 .botaoExcluir{
@@ -101,13 +114,8 @@ thead{
   border-color: rgb(0, 17, 255);
   border-radius: 7px;
   color: white;
-  
   font-family: "Times New Roman", Times, serif;
 }
 
-tr img{
-  padding-right: 12px;
-  width: 18px;
-  height: 18px;
-}
+
 

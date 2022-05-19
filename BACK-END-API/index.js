@@ -30,21 +30,37 @@ app.get("/api/get", (req,res) => {
 app.post("/api/insert", (req, res) => {
     const nomeCliente = req.body.nomeCliente
     const emailCliente = req.body.emailCliente
-
     const sqlInsert = "INSERT INTO nome_cliente_table (nome_cliente, email_cliente) VALUES (?, ?);"
     db.query(sqlInsert, [nomeCliente, emailCliente], (err, result) => {
-        console.log(result)
+        if(!err){
+            console.log('--Cliente inserido com sucesso--')
+        }else{
+            console.log('--Erro ao inserir o usuário--')
+        }
     })
 })
 
 app.delete("/api/delete/:id", (req,res) => {
     const cliente = req.params.id;
     const sqlDelete = "DELETE FROM nome_cliente_table WHERE id = ?";
-
+    console.log(cliente)
         db.query(sqlDelete, cliente, (err, result) => {
-            console.log(result)
+            if(!err){
+                console.log('--Cliente deletado com sucesso--' + err)
+            }else{
+                console.log('--Erro ao deletar o usuário--')
+            }
         })
 })
 
+app.put('/api/update/:id',(req,res) => {
+    const cliente = req.params.id;
+    const nomeCliente = req.body.nomeCliente;
+    const emailCliente = req.body.emailCliente
+    const sqlUpdate = "UPDATE SET nome_cliente_table nome_cliente = ? WHERE = email_cliente ?"
+    console.log(cliente)
+    db.query(sqlUpdate, [nomeCliente, emailCliente], (err, result) => {        
+    })
+})
 
 app.listen(3001, () => console.log('Servidor rodando na porta 3001'))
